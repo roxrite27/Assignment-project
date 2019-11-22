@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript">  </script>
+
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<script src="js/jquery.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<style type="text/css">
+  
+</style>
+</head>
+	<body onload="fetchData()"></body>
+	<div class="header-top">
+		<div class="container">
+			<div class="head-main">
+				<a href="index.html"></a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="header">
+		<div class="container">
+			<div class="head">
+			<div class="navigation">
+				 <span class="menu"></span> 
+					<ul class="navig">
+						<li><a href="about.html">page</a></li>
+						<li><a href="index.html" class="active">gallery</a></li>
+            <li><a href="india.html">restaurant</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+			</div>
+			<div class="header-right">
+				<div class="search-bar">
+					<input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+					<input type="submit" value="">
+				</div>
+				<ul>
+					<li><a href="https://www.facebook.com/"><span class="fb"> </span></a></li>
+					<li><a href="#"><span class="twit"> </span></a></li>
+					<li><a href="#"><span class="pin"> </span></a></li>
+					
+				</ul>
+			</div>
+				<div class="clearfix"></div>
+			</div>
+			</div>
+		</div>	
+	
+		<script>
+			$("span.menu").click(function(){
+				$(" ul.navig").slideToggle("slow" , function(){
+				});
+			});
+		</script>
+
+<div class="container">
+<div style="text-align:center" class="abt-left1">
+<img src="images/hongkong3.jpg" style="width: 70%;height: 100%;" >
+</div>
+<h2 id="demo1" style="color:black"></h2>
+</div>
+
+
+<script>
+	function fetchData()
+	{
+		var xhttp;
+  if (window.XMLHttpRequest) {
+    // code for modern browsers
+    xhttp = new XMLHttpRequest();
+  } else {
+    // code for IE6, IE5
+    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       var obj=JSON.parse(this.responseText);
+       var res=obj.meals[0].strDescription
+        document.getElementById("demo1").innerHTML = res;
+		
+    }
+  };
+  xhttp.open("GET", "https://www.themealdb.com/api/json/v1/1/list.php?i=list", true);
+  xhttp.send();
+		}
+</script>
+
+  
+       
+	
+</body>
+</html>

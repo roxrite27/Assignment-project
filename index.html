@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript">  </script>
+
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<script src="js/jquery.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<style type="text/css">
+  @keyframes rotate-top {
+  100% {
+    
+            transform: rotateY(360deg);
+    
+            transform-origin: center;
+  }
+}
+.rotate-top:hover{
+  
+          animation: rotate-top 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+</style>
+</head>
+	<body onload="fetchData()"></body>
+	<div class="header-top">
+		<div class="container">
+			<div class="head-main">
+				<a href="index.html"></a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="header">
+		<div class="container">
+			<div class="head">
+			<div class="navigation">
+				 <span class="menu"></span> 
+					<ul class="navig">
+						<li><a href="about.html">page</a></li>
+						<li><a href="blog.html" class="active">gallery</a></li>
+            <li><a href="india.html">restaurant</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+			</div>
+			<div class="header-right">
+				<div class="search-bar">
+					<input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+					<input type="submit" value="">
+				</div>
+				<ul>
+					<li><a href="https://www.instagram.com/roxrite27/"><span class="fb"> </span></a></li>
+					<li><a href="#"><span class="twit"> </span></a></li>
+					<li><a href="#"><span class="pin"> </span></a></li>
+					
+				</ul>
+			</div>
+				<div class="clearfix"></div>
+			</div>
+			</div>
+		</div>	
+	
+		<script>
+			$("span.menu").click(function(){
+				$(" ul.navig").slideToggle("slow" , function(){
+				});
+			});
+		</script>
+          
+<div class="container">
+
+       
+  <div id="resDetails">
+  
+        </div>
+</div>
+
+
+            </div>
+
+            				
+		
+       
+
+
+
+<script type="text/javascript" src="Meal.js"></script>
+  
+</body>
+</html>

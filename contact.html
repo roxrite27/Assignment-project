@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<script src="js/jquery.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+	
+	<div class="header-top">
+		<div class="container">
+			<div class="head-main">
+				<a href="index.html"></a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="header">
+			<div class="container">
+				<div class="head">
+				<div class="navigation">
+					 <span class="menu"></span> 
+						<ul class="navig">
+							<li><a href="about.html">page</a></li>
+							<li><a href="index.html" class="active">gallery</a></li>
+				<li><a href="india.html">restaurant</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+				</div>
+				<div class="header-right">
+					<div class="search-bar">
+						<input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+						<input type="submit" value="">
+					</div>
+					<ul>
+						<li><a href="https://www.facebook.com/"><span class="fb"> </span></a></li>
+						<li><a href="#"><span class="twit"> </span></a></li>
+						<li><a href="#"><span class="pin"> </span></a></li>
+						
+					</ul>
+				</div>
+					<div class="clearfix"></div>
+				</div>
+				</div>
+			</div>	
+	
+		<script>
+			$("span.menu").click(function(){
+				$(" ul.navig").slideToggle("slow" , function(){
+				});
+			});
+		</script>
+	
+	<div class="contact">
+		<div class="container">
+			<div class="contact-top heading">
+				<h3>CONTACT</h3>
+			</div>
+
+			<div class="contact-bottom">
+					<div id="googleMap" style="width:100%;height:400px;"></div>
+				<script>
+					function myMap() {
+					var mapProp= {
+					  center:new google.maps.LatLng(30.483997,76.593948),
+					  zoom:30,
+					};
+					var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+					}
+					</script>
+					
+					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9rv3JMOTG5VNJg1SS0eLOMvfWQLoMMKg&callback=myMap"></script>
+				
+					<div class="contact-text">
+					<div class="col-md-4 contact-left">
+						<p>Before contacting me, We would appreciate it if you would first take a look at our page refer to our City Guides for city tips.That being said, if you have any questions, We would love to hear from you, and We will do our best to get back with you as soon as possible.</p>
+						<div class="address">
+							<h4>Address</h4>
+							<p>Chitkara University 
+							<span>Rajpura</span>
+							Punjab</p>
+						</div>
+					</div>	
+					<div class="col-md-8 contact-right">
+						<form>
+						<input placeholder="Name" type="text" class="form-control" required>
+						<br>
+						<input placeholder="Email" type="text" class="form-control" required>
+						<textarea placeholder="Message" class="form-control" required></textarea>
+							<div class="submit-btn">
+								
+									<input type="submit" value="SUBMIT">
+								</form>
+							</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+  
+        
+        
+       
+	
+</body>
+</html>
